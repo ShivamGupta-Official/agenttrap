@@ -1,8 +1,8 @@
-# 🍯 Are You Even Human?
+# 🍯 agenttrap (Are You Even Human?)
 
-**An AI-Attacker-Detecting Honeypot**
+**Next-Generation Autonomous AI-Attacker Honeypot & Threat Intelligence Platform**
 
-Traditional honeypots catch human hackers. This one is built specifically to catch **AI agents** attacking your systems — using the fact that LLM-based attackers think and act differently from humans, and that difference is exploitable.
+Traditional honeypots catch human hackers. **agenttrap** is built specifically to trap and profile **autonomous AI agents** attacking your systems — exploiting the fundamental reality that LLM-based cognitive attackers reason, adapt, and parse context differently from humans.
 
 ## Architecture
 
