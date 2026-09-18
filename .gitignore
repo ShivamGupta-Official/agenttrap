@@ -1,0 +1,30 @@
+﻿# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node
+node_modules/
+
+# Databases & local state
+*.db
+*.sqlite3
+*.log
+
+# Binaries & keys
+*.exe
+*.zip
+id_ed25519*
+ACTIVE_*.txt
+SERVEO_*.txt
+LIVE_*.txt
+.env
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Next-Gen AI-Aware Authentication Security - Master Pitch & Architecture</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap');
+  
+  @page {
+    size: A4;
+    margin: 1.6cm 1.4cm 1.6cm 1.4cm;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+    line-height: 1.5;
+    font-size: 9.5pt;
+  }
+
+  .cover-header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+    color: #ffffff;
+    padding: 2.2rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 1.8rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  .cover-header h1 {
+    font-size: 21pt;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #38bdf8;
+    margin-bottom: 0.3rem;
+  }
+  .cover-header .subtitle {
+    font-size: 11pt;
+    color: #94a3b8;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  .tag-row {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .tag {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    font-size: 7.5pt;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    color: #e2e8f0;
+  }
+
+  h2 {
+    font-size: 13pt;
+    font-weight: 700;
+    color: #0f172a;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.3rem;
+    margin-top: 1.4rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  p { margin-bottom: 0.6rem; color: #334155; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8rem 0 1.2rem 0;
+    font-size: 8.5pt;
+  }
+  th, td {
+    padding: 0.5rem 0.65rem;
+    border: 1px solid #cbd5e1;
+    text-align: left;
+  }
+  th {
+    background: #f1f5f9;
+    font-weight: 700;
+    color: #0f172a;
+    text-transform: uppercase;
+    font-size: 7.5pt;
+    letter-spacing: 0.04em;
+  }
+  tr:nth-child(even) td {
+    background: #f8fafc;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 7.5pt;
+    font-weight: 700;
+  }
+  .badge-human { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+  .badge-bot { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+  .badge-agent { background: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
+
+  .qa-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .qa-q {
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 9.5pt;
+    margin-bottom: 0.35rem;
+  }
+  .qa-q::before { content: "Q: "; color: #2563eb; font-weight: 800; }
+  .qa-a { color: #334155; font-size: 8.8pt; line-height: 1.45; }
+  .qa-a::before { content: "A: "; color: #15803d; font-weight: 700; }
+
+  .formula-box {
+    background: #0f172a;
+    color: #38bdf8;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8.5pt;
+    margin: 0.6rem 0 1rem 0;
+    border: 1px solid #334155;
+    text-align: center;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 0.8rem 0;
+  }
+  .card-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 0.75rem;
+  }
+  .card-box h4 {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.3rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="cover-header">
+  <h1>🛡️ ARE YOU EVEN HUMAN?</h1>
+  <div class="subtitle">Next-Gen AI-Aware Authentication Security: Inline Behavioral Analysis & Agenticity Scoring</div>
+  <div class="tag-row">
+    <span class="tag">AI Threat Detection</span>
+    <span class="tag">FastAPI ASGI</span>
+    <span class="tag">React 18 + Vite</span>
+    <span class="tag">3-Tier Cognitive Hierarchy</span>
+    <span class="tag">Zero-WAF Dependency</span>
+  </div>
+</div>
+
+<h2>🎯 1. The 3-Tier Cognitive Scoring Hierarchy (How to Explain to Judges)</h2>
+<p>The login portal evaluates authentication traffic in real time on a <b>0 to 100 Threat &amp; Agenticity Scale</b>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Threat Category</th>
+      <th>Score Bracket</th>
+      <th>Assigned Badge</th>
+      <th>Key Behavioral Signatures</th>
+      <th>Forensic Proof in SOC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>👤 Human User</b></td>
+      <td><b style="color:#16a34a;">0 – 15</b></td>
+      <td><span class="badge badge-human">👤 HUMAN</span></td>
+      <td>Irregular timing (CV &gt; 0.8), manual typing delays (3–10s), typo corrections.</td>
+      <td>Never extracts hidden developer comments or canary tokens.</td>
+    </tr>
+    <tr>
+      <td><b>🤖 Scripted Bot</b></td>
+      <td><b style="color:#d97706;">20 – 38</b></td>
+      <td><span class="badge badge-bot">🤖 BOT</span></td>
+      <td>Fixed metronomic timing (CV ≈ 0.0), repetitive credential stuffing.</td>
+      <td>Fails to adapt upon receiving 403 Forbidden; hammers same endpoint blindly.</td>
+    </tr>
+    <tr>
+      <td><b>🧠 Autonomous AI Agent</b></td>
+      <td><b style="color:#dc2626;">65 – 100</b></td>
+      <td><span class="badge badge-agent">🧠 AI AGENT</span></td>
+      <td>High cognitive agency, reads HTML comments, follows canary prompt traps, instant error recovery.</td>
+      <td>Extracts hidden <code>X-Debug-Token</code> and executes multi-step reasoning exploit loop.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>🧠 2. The 5-Dimensional Behavioral Analysis Engine</h2>
+<div class="formula-box">
+  Agenticity Score = min(100, max(0, Σ (wᵢ · Dᵢ) + TripwireBonus + TimingBonus))
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dimension</th>
+      <th>Weight</th>
+      <th>What It Measures</th>
+      <th>Human (0–15)</th>
+      <th>Scripted Bot (20–38)</th>
+      <th>Autonomous AI Agent (65–100)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>1. Adaptation</b></td>
+      <td><b>25%</b></td>
+      <td>Strategy modification rate upon encountering friction.</td>
+      <td>Slow (10–30%)</td>
+      <td>Zero (0%)</td>
+      <td><b>Instant logical pivot (&gt;85%)</b></td>
+    </tr>
+    <tr>
+      <td><b>2. Context Usage</b></td>
+      <td><b>25%</b></td>
+      <td>Semantic comprehension of hidden canary tokens & comments.</td>
+      <td>0% (ignores HTML comments)</td>
+      <td>0% (blind to page content)</td>
+      <td><b>100% (extracts & reuses tokens)</b></td>
+    </tr>
+    <tr>
+      <td><b>3. Error Recovery</b></td>
+      <td><b>20%</b></td>
+      <td>Pivoting rationally upon HTTP 403, 429, or 503 probes.</td>
+      <td>Closes tab or re-types</td>
+      <td>Repeats same payload</td>
+      <td><b>Explores alternate APIs (100%)</b></td>
+    </tr>
+    <tr>
+      <td><b>4. Goal Persistence</b></td>
+      <td><b>15%</b></td>
+      <td>Multi-step trajectory consistency towards an objective.</td>
+      <td>Low/Medium</td>
+      <td>Stateless repetition</td>
+      <td><b>Maintains multi-step goals</b></td>
+    </tr>
+    <tr>
+      <td><b>5. Automation Pattern</b></td>
+      <td><b>15%</b></td>
+      <td>Inter-arrival Coefficient of Variation (CV = σ/μ).</td>
+      <td>High variance (CV &gt; 0.8)</td>
+      <td>Clockwork (CV ≈ 0.0)</td>
+      <td><b>Bimodal burst-pause (0.2–0.5)</b></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>🏛️ 3. Technology Stack & Component Architecture</h2>
+<div class="grid-2">
+  <div class="card-box">
+    <h4>🖥️ Backend Architecture (Python 3.12 / FastAPI)</h4>
+    <p>• <b>FastAPI ASGI Core:</b> Sub-millisecond packet inspection with non-blocking async pipeline.<br>
+    • <b>aiosqlite WAL Database:</b> Async ACID storage of sessions and forensic evidence.<br>
+    • <b>Multi-Transport Live Bridge:</b> WebSockets + Server-Sent Events (SSE) stream ensuring 100% firewall & proxy penetration.<br>
+    • <b>Dual-Tier IP Intelligence:</b> Real-time GeoIP, ASN organization, and device OS/Client fingerprinting.</p>
+  </div>
+  <div class="card-box">
+    <h4>💻 Frontend Architecture (React 18 / Vite)</h4>
+    <p>• <b>Pure SOC Monitor (/dashboard):</b> Presentation screen for judges showing real-time threat feed, attacker dossiers, and behavioral radar.<br>
+    • <b>Dedicated Attack Lab (/simulator):</b> Standalone attack controller with 3 clean attack vectors (Bot, Human, AI Agent).<br>
+    • <b>SVG Multiaxial Radar Chart:</b> 5-dimensional real-time cognitive visualization.</p>
+  </div>
+</div>
+
+<h2>🎤 4. Judges' Pitch & Q&A Defense Sheet</h2>
+<div class="qa-card">
+  <div class="qa-q">Why does an AI Agent score 65–100 while a Scripted Bot gets 20–38 and a Human gets 0–15?</div>
+  <div class="qa-a">The score measures <b>Cognitive Agency & Intent</b>. A human is organic with zero automation (0–15). A scripted bot is automated, but dumb and non-adaptive (20–38). An autonomous AI agent exhibits high reasoning, context comprehension, and adaptive exploit planning—earning the highest threat score (65–100).</div>
+</div>
+
+</body>
+</html>
